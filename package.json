@@ -10,6 +10,7 @@
     "lint": "eslint",
     "import-images": "node --env-file=.env scripts/import-local-images.cjs",
     "import-images:replace": "node --env-file=.env scripts/import-local-images.cjs --replace",
+    "import-images:prod": "node --env-file=.env.production.import scripts/import-local-images.cjs --replace ./seed-images",
     "db:push": "prisma db push",
     "db:studio": "prisma studio"
   },

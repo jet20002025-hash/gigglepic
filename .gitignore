@@ -26,6 +26,7 @@ npm-debug.log*
 # env
 .env
 .env*.local
+.env.production.import
 
 # prisma
 /prisma/dev.db
