@@ -1,0 +1,17 @@
+# 本地 PostgreSQL（无需 Neon）：docker compose up -d
+# DATABASE_URL=postgresql://postgres:devdev@127.0.0.1:5433/yizhangtu?schema=public
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: yizhangtu-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devdev
+      POSTGRES_DB: yizhangtu
+    ports:
+      - '5433:5432'
+    volumes:
+      - yizhangtu_pg_data:/var/lib/postgresql/data
+
+volumes:
+  yizhangtu_pg_data:
