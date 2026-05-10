@@ -22,7 +22,7 @@ export function DemoViewer({ files }: { files: string[] }) {
     setCurrent((prev) => pickRandom(files, prev))
   }, [files])
 
-  const src = `/local-import/${encodeURIComponent(current)}`
+  const src = `/api/demo-local/${encodeURIComponent(current)}`
 
   return (
     <>
